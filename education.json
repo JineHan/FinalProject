@@ -1,0 +1,19 @@
+[
+    {
+        "degree" : "Masters in Software Development (MS)",
+        "school": "Boston University",
+        "location": "MA"
+    },
+    {
+        "degree" : "Masters in Business Administration (MBA)",
+        "school": "University of Washington",
+        "location": "WA"
+       
+    },
+    {
+        "degree" : "Fashion Business (BA)",
+        "school": "Hansung University",
+        "location": "Seoul, Korea"
+
+    }
+]

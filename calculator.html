@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>
+  <script src="calculator.js" type ="module"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="main.html" class="nav-link">Home</a>
+    <a href="resume.html" class="nav-link">About</a>
+    <a href="#" class="nav-link">Projects</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </nav>
+  <div id="app">
+    <h1 class="calculator-title">Calculator</h1>
+    <div class="calculator">
+      <div class="display">{{ result }}</div>
+      <div class="history">
+        <h2>History:</h2>
+        <ul>
+          <li v-for="calculation in history" :key="calculation">{{ calculation }}</li>
+        </ul>
+      </div>
+      <div class="buttons">
+        <button v-for="button in buttons" :key="button" @click="handleButtonPress(button)">
+          {{ button }}
+        </button>
+        <button @click="resetCalculator">Reset</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>
